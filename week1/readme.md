@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+This class i learned how to read code  for example print('hello world') ,and then i a lot of software to help write code.i think i have big problem is my english is really bad so sometimes i can not understand , and i forget the green word and red word means what haha,that is all.
