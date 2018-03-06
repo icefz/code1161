@@ -10,3 +10,5 @@ os.system('pip install requests')
 os.system('code --install-extension ms-python.python')
 # install code runner
 os.system('code --install-extension formulahendry.code-runner')
+# this is a command
+print('iughi')
