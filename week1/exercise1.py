@@ -5,5 +5,4 @@ TODO: write a python script that first prints "hello world!"
 print('Hello world!')
 print('hello world')
 print('hello world')
-# this is command
-print('hruoh')
+
