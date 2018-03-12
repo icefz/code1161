@@ -3,12 +3,11 @@
 
 
 def is_odd(a_number):
-    """Return True if a_number is odd, and False if a_number is even.
+ """Return True if a_number is odd, and False if a_number is even.
 
     Look into modulo division using the '%' operator as one way of doing this.
     """
-    pass
-
+return a_number % 2 == 1
 
 def fix_it(moves=True, should_move=True):
     """Decide what to do.
@@ -21,7 +20,19 @@ def fix_it(moves=True, should_move=True):
     "Duct Tape"
     "No Problem"
     """
-    pass
+    if moves is True
+      if should_move is True:
+          return "No Problem"
+    else:
+            return "Duct Tape"
+else:
+        if should_move is True:
+            return "WD-40"
+        else:
+            return "No Problem"
+    
+
+       
 
 
 def loops_1a():
@@ -31,7 +42,10 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    pass
+    returnlist = []
+    for x in range (1,11):
+        returnlist.append("*")
+    return (returnlist)
 
 
 
@@ -43,7 +57,11 @@ def loops_1c(number_of_items=5, symbol="#"):
     a string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
-    pass
+    returnlist = []
+    for x in range (1,6):
+        returnlist.append("#")
+        return (returnlist)
+
 
 
 def loops_2():
@@ -64,8 +82,14 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    pass
+    returnlist = []
+    for x in range(0,10)
+        tmp = []
+        for y in range(0,10):
+            tmp.append("*")
+        returnlist.appemd(tmp)
 
+return (returnlist)         
 
 def loops_3():
     """Make a rising block of numbers.
@@ -88,8 +112,13 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    pass
-
+returnlist = []
+for x in range(0,10):
+    tmp = []
+    for y in range(0,10)
+        tmp.append(y)
+    returnlist.append(tmp)
+return returnlist
 
 def loops_4():
     """Make a block of numbers that rises left to right.
@@ -108,7 +137,13 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    pass
+    returnlist = []
+    for x in range(0,10):
+        tmp = []
+        for y in range (0,10)
+            tmp.append(y)
+        returnlist.append(tmp)
+    return returnlist
 
 
 def loops_5():
@@ -133,7 +168,13 @@ def loops_5():
         "There are {} green bottles".format(8)
     you'll come to see the pros and cons of each over time.
     """
-    pass
+   returnlist = []
+   for x in range(0,10)
+       tmp = []
+       for y in range(0,5):
+           tmp.append("(x"+ str(x) +", y" + str(y) + "), ")
+        returnlist.append(tmp)
+    return returnlist
 
 
 def loops_6():
@@ -156,7 +197,11 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    pass
+    returnlist =[]
+    for x in range(0,10):
+        tmp = []
+    returnlist.append(y)
+return returnlist
 
 
 def loops_7():
@@ -180,7 +225,22 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    pass
+   returnlist = []
+   for x in range(0,10):
+       tmp = []
+       for y in range(0,10):
+           tmp.append("*")
+           if x + y < 5:
+               tmp[y] = ""
+            asterrisk = x+5
+            if y > asterisk:
+                tmp[y] = " "
+            retyrnlist.append(tmp)
+
+            return (returnlist)
+                
+            
+
 
 
 def lp(some_kind_of_list, exercise_name):
