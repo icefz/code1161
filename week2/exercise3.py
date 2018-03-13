@@ -3,11 +3,11 @@
 
 
 def is_odd(a_number):
- """Return True if a_number is odd, and False if a_number is even.
+    """Return True if a_number is odd, and False if a_number is even.
 
     Look into modulo division using the '%' operator as one way of doing this.
     """
-return a_number % 2 == 1
+    return a_number % 2 == 1
 
 def fix_it(moves=True, should_move=True):
     """Decide what to do.
@@ -20,12 +20,12 @@ def fix_it(moves=True, should_move=True):
     "Duct Tape"
     "No Problem"
     """
-    if moves is True
-      if should_move is True:
+    if moves is True:
+        if should_move is True:
           return "No Problem"
-    else:
+        else:
             return "Duct Tape"
-else:
+    else:
         if should_move is True:
             return "WD-40"
         else:
@@ -58,9 +58,9 @@ def loops_1c(number_of_items=5, symbol="#"):
     E.g.: ['#', '#', '#', '#', '#']
     """
     returnlist = []
-    for x in range (1,6):
-        returnlist.append("#")
-        return (returnlist)
+    for x in range (number_of_items):
+        returnlist.append(symbol)
+    return (returnlist)
 
 
 
@@ -83,13 +83,13 @@ def loops_2():
           ]
     """
     returnlist = []
-    for x in range(0,10)
-        tmp = []
+    for x in range(0,10):
+        fz = []
         for y in range(0,10):
-            tmp.append("*")
-        returnlist.appemd(tmp)
+            fz.append("*")
+        returnlist.append(fz)
 
-return (returnlist)         
+    return(returnlist)         
 
 def loops_3():
     """Make a rising block of numbers.
@@ -112,13 +112,13 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-returnlist = []
-for x in range(0,10):
-    tmp = []
-    for y in range(0,10)
-        tmp.append(y)
-    returnlist.append(tmp)
-return returnlist
+    returnlist = []
+    for x in range(0,10):
+        fz = []
+        for y in range(0,10):
+            fz.append(str(x))
+        returnlist.append(fz)
+    return returnlist
 
 def loops_4():
     """Make a block of numbers that rises left to right.
@@ -139,10 +139,10 @@ def loops_4():
     """
     returnlist = []
     for x in range(0,10):
-        tmp = []
-        for y in range (0,10)
-            tmp.append(y)
-        returnlist.append(tmp)
+        fz = []
+        for y in range (0,10):
+            fz.append(str(y))
+        returnlist.append(fz)
     return returnlist
 
 
@@ -168,12 +168,12 @@ def loops_5():
         "There are {} green bottles".format(8)
     you'll come to see the pros and cons of each over time.
     """
-   returnlist = []
-   for x in range(0,10)
-       tmp = []
-       for y in range(0,5):
-           tmp.append("(x"+ str(x) +", y" + str(y) + "), ")
-        returnlist.append(tmp)
+    returnlist = []
+    for i in range(0,10):
+       fz = []
+       for j in range(0,5):
+           fz.append("(i"+ str(i) +", j" + str(j) + ")")
+       returnlist.append(fz)
     return returnlist
 
 
@@ -198,10 +198,12 @@ def loops_6():
     TIP: look out for the starting condition.
     """
     returnlist =[]
-    for x in range(0,10):
-        tmp = []
-    returnlist.append(y)
-return returnlist
+    for x in range(0, 10):
+        fz = []
+        for y in range (0, x + 1):
+            fz.append(str(y))
+        returnlist.append(fz)
+    return returnlist
 
 
 def loops_7():
@@ -225,19 +227,19 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-   returnlist = []
-   for x in range(0,10):
-       tmp = []
-       for y in range(0,10):
-           tmp.append("*")
-           if x + y < 5:
-               tmp[y] = ""
-            asterrisk = x+5
+    returnlist = []
+    for x in range(0, 5):
+        fz = []
+        for y in range(0, 9):
+            fz.append("*")
+            if x + y < 4:
+                fz[y] = " "
+            asterisk = x+4
             if y > asterisk:
-                tmp[y] = " "
-            retyrnlist.append(tmp)
+                fz[y] = " "
+        returnlist.append(fz)
 
-            return (returnlist)
+    return (returnlist)
                 
             
 
