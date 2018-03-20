@@ -12,7 +12,18 @@ def loop_ranger(start, stop=None, step=1):
 
     Do this using any method apart from just using range()
     """
-    pass
+    x = start
+    list1 = []
+    while x < stop:
+      list1.append(x)
+      x = x + step
+    return list1
+
+
+    
+
+    
+         
 
 
 def lone_ranger(start, stop, step):
@@ -20,8 +31,8 @@ def lone_ranger(start, stop, step):
 
     Look up the docs for range() and wrap it in a 1:1 way
     """
-    pass
-
+    range(start,stop,step)
+    
 
 def two_step_ranger(start, stop):
     """Make a range that steps by 2.
@@ -29,8 +40,27 @@ def two_step_ranger(start, stop):
     Sometimes you want to hide complexity.
     Make a range function that always has a step size of 2
     """
-    pass
+    x = start                           
+    list2 = []
+    while x < stop:
+        list2.append(x)
+        x = x + 2
+    return list2
+        
+   
+  
 
+
+def gene_krupa_range(start, stop, even_step, odd_step):
+    """Make a range that has two step sizes.
+
+    make a list that instead of having evenly spaced steps
+    has odd steps be one size and even steps be another.
+    """
+    x = start
+    list3 = []
+     
+  
 
 def stubborn_asker(low, high):
     """Ask for a number between low and high until actually given one.
@@ -38,8 +68,9 @@ def stubborn_asker(low, high):
     Ask for a number, and if the response is outside the bounds keep asking
     until you get a number that you think is OK
     """
-    pass
+   
 
+    
 
 def not_number_rejector(message):
     """Ask for a number repeatedly until actually given one.
@@ -74,6 +105,6 @@ if __name__ == "__main__":
     print("\nstubborn_asker")
     stubborn_asker(30, 45)
     print("\nnot_number_rejector")
-    not_number_rejector("Enter a number: ")
+    not_number_rejector("writemessage")
     print("\nsuper_asker")
     super_asker(33, 42)
