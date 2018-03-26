@@ -31,8 +31,22 @@ def lone_ranger(start, stop, step):
 
     Look up the docs for range() and wrap it in a 1:1 way
     """
-    range(start,stop,step)
+    range_list = []
+    if start < stop and step < stop - start:
+        while start > stop:
+            range_list.append(start)
+            start += step
+    elif start > stop and stop > stop - start:
+        while start > stop:
+            range_list.append(start)
+            start += step
+    else:
+        range_list
+
+    return range_list
+
     
+
 
 def two_step_ranger(start, stop):
     """Make a range that steps by 2.
@@ -59,6 +73,20 @@ def gene_krupa_range(start, stop, even_step, odd_step):
     """
     x = start
     list3 = []
+    while x < stop:
+        if x == 0:
+            list3.append(x)
+            x = x + odd_step
+            x = 1
+        else:
+            list3.append(x)
+            x = x + even_step
+            x = 0
+
+    return(list3)
+            
+    
+
      
   
 
@@ -68,6 +96,15 @@ def stubborn_asker(low, high):
     Ask for a number, and if the response is outside the bounds keep asking
     until you get a number that you think is OK
     """
+    number = int(input("Enter a number between" + str(low) + " and " + str(high)+ ": "))
+
+    while number <= int(low) or number >= int(high):
+        number = int(input("Invalid. Enter a number between " + str(low) + " and " + str(high) + ": "))
+    print('OK')
+    return(number)
+
+    
+
    
 
     
@@ -79,8 +116,18 @@ def not_number_rejector(message):
     "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    pass
-
+    while True:
+        try:
+            number_given = int(str(raw_input(message)))
+        except ValueError:
+            print("This is not a number.")
+            continue
+        except NameError:
+            print("This is not a number.")
+            continue
+        else:
+            return number_given
+        break
 
 def super_asker(low, high):
     """Robust asking function.
@@ -88,7 +135,27 @@ def super_asker(low, high):
     Combine stubborn_asker and not_number_rejector to make a function
     that does it all!
     """
-    pass
+    while True:
+        try:
+            given_number = int(str(raw_input("Please give a number between " +
+                                             str(low) + " and " +
+                                             str(high) + ": ")))
+        except ValueError:
+            print("This is not a number.")
+            continue
+        except NameError:
+            print("This is not a number.")
+            continue
+        else:
+            while given_number < low or given_number > high:
+                print ("The number is not between " + str(low) + " and " +
+                       str(high))
+                given_number = int(str(raw_input("Please give a number "
+                                                 "between " + str(low) +
+                                                 " and " + str(high) + ": ")))
+            return given_number
+        break
+    
 
 
 if __name__ == "__main__":
