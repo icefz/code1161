@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+This class i learned how to write lastname password or postcode i think have a little difficult and i will learned again and i wwill solve  some difficult question
