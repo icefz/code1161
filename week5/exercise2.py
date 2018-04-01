@@ -5,7 +5,7 @@ Exercises and examples to illustrate recursion.
 """
 
 
-import turtle
+import turtle 
 
 
 def italian_dinner(axiom="tomatoes", guard=6):
