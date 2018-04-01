@@ -7,7 +7,7 @@ import requests
 import inspect
 import sys
 
-# Handy constants
+# Handy constants 
 LOCAL = os.path.dirname(os.path.realpath(__file__))  # the context of this file
 CWD = os.getcwd()  # The curent working directory
 if LOCAL != CWD:
