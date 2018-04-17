@@ -122,7 +122,7 @@ def wunderground():
     the_json = json.loads(r.text)
     obs = the_json['current_observation']
     state = obs["display_location"]["state"]
-    latitude = obs["display_location"]["latitude"]
+    latitude = obs["display_location"]["latitude"] 
     longitude = obs["display_location"]["longitude"]
     local_tz_offset = obs["local_tz_offset"]
 

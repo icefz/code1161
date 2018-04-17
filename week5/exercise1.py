@@ -114,7 +114,7 @@ def get_triangle_facts(base, height, units="mm"):
             "units": units}
 
 
-# this should return a multi line string that looks a bit like this: 
+# this should return a multi line string that looks a bit like this:   
 #
 # 15
 # |

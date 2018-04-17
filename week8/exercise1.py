@@ -18,7 +18,8 @@ def greet(name="Towering Timmy"):
     return a string of "Hello" and the name argument.
     E.g. if given as "Towering Timmy" it should return "Hello Towering Timmy"
     """
-    pass
+    print("Hello" + name)
+    return greet
 
 
 def three_counter(input_list=[1, 4, 3, 5, 7, 1, 3, 2, 3, 3, 5, 3, 7]):
@@ -27,7 +28,7 @@ def three_counter(input_list=[1, 4, 3, 5, 7, 1, 3, 2, 3, 3, 5, 3, 7]):
     Return an integer.
     TIP: the test will use a different input_list, so don't just return 5
     """
-    pass
+    return input_list.count(3)
 
 
 def fizz_buzz():
@@ -45,7 +46,18 @@ def fizz_buzz():
     if it is. E.g. [1, 2, "Fizz", 4, "Buzz", 6, 7, ...]
     """
     fizzBuzzList = []
-    # your code here
+    for i in range(1,101):
+        if i % 3 == 0:
+            fizzBuzzList.append("Fizz")
+        elif i % 5 == 0:
+            fizzBuzzList.append("Buzz")
+        elif i % 15 == 0:
+            fizzBuzzList.append("FizzBuzz")
+        else:
+            fizzBuzzList.append(i)
+    return fizzBuzzList
+        
+     # your code here
     return fizzBuzzList
 
 
@@ -56,7 +68,9 @@ def put_behind_bars(input_string="very naughty boy"):
     e.g. "very naughty boy" should return "|v|e|r|y| |n|a|u|g|h|t|y| |b|o|y|"
     TIP: make sure that you have a pipe on both ends of the string.
     """
-    pass
+    pipes = '|'
+    return '|' + '|'.join(input_string) + '|'
+    
 
 
 def pet_filter(letter="a"):
@@ -69,7 +83,8 @@ def pet_filter(letter="a"):
             "bali cattle", "gayal", "turkey", "goldfish", "rabbit", "koi",
             "canary", "society finch", "fancy mouse", "siamese fighting fish",
             "fancy rat and lab rat", "mink", "red fox", "hedgehog", "guppy"]
-    pass
+    return [i for i in pets if letter in i] 
+
 
 
 def best_letter_for_pets():
@@ -80,7 +95,15 @@ def best_letter_for_pets():
     """
     import string
     the_alphabet = string.lowercase
-    pass
+    maxlen = 0
+    maxletter = ""
+    for x in the_alphabet:
+        currlen = len(pet_filter(x))
+        if(currlen > maxlen):
+            maxlen = currlen
+            maxLetter = x
+    print("maxlen"+str(maxlen)+"letter is="+maxletter)
+    return maxletter 
 
 
 def make_filler_text_dictionary():
@@ -98,7 +121,16 @@ def make_filler_text_dictionary():
     TIP: you'll need the requests library
     """
     import requests
-    pass
+    word_dictionary = {}
+    for number in range(3,7):
+        word_dictionary[number]=[]
+        for word in range (3):
+            url= " http://www.setgetgo.com/randomword/get.php?len="+str(number)
+            new_word = requests.get(url).text
+            print(new_word)
+            word_dictionary[number].append(new_word)
+    return word_dictionary
+
 
 
 def random_filler_text(number_of_words=200):
