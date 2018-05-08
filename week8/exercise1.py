@@ -5,10 +5,16 @@ I'm in UR exam.
 This is the same as the weekly exercises, fill in the functions,
 and test them to see if they work.
 
+<<<<<<< HEAD
 You've got an hour.
 """
 from __future__ import division
 from __future__ import print_function
+=======
+You've have 90 minutes.
+"""
+import string
+>>>>>>> f76a1f2d8baff68dc359e69da49380b6073630ee
 import time
 
 
@@ -18,8 +24,12 @@ def greet(name="Towering Timmy"):
     return a string of "Hello" and the name argument.
     E.g. if given as "Towering Timmy" it should return "Hello Towering Timmy"
     """
+<<<<<<< HEAD
     print("Hello" + name)
     return greet
+=======
+    pass
+>>>>>>> f76a1f2d8baff68dc359e69da49380b6073630ee
 
 
 def three_counter(input_list=[1, 4, 3, 5, 7, 1, 3, 2, 3, 3, 5, 3, 7]):
@@ -28,7 +38,11 @@ def three_counter(input_list=[1, 4, 3, 5, 7, 1, 3, 2, 3, 3, 5, 3, 7]):
     Return an integer.
     TIP: the test will use a different input_list, so don't just return 5
     """
+<<<<<<< HEAD
     return input_list.count(3)
+=======
+    pass
+>>>>>>> f76a1f2d8baff68dc359e69da49380b6073630ee
 
 
 def fizz_buzz():
@@ -43,6 +57,7 @@ def fizz_buzz():
             from https://blog.codinghorror.com/why-cant-programmers-program/
 
     Return a list that has an integer if the number isn't special, and a string
+<<<<<<< HEAD
     if it is. E.g. [1, 2, "Fizz", 4, "Buzz", 6, 7, ...]
     """
     fizzBuzzList = []
@@ -58,6 +73,12 @@ def fizz_buzz():
     return fizzBuzzList
         
      # your code here
+=======
+    if it is. E.g. [1, 2, "Fizz", 4, "Buzz", "Fizz", 7, ...]
+    """
+    fizzBuzzList = []
+    # your code here
+>>>>>>> f76a1f2d8baff68dc359e69da49380b6073630ee
     return fizzBuzzList
 
 
@@ -65,6 +86,7 @@ def put_behind_bars(input_string="very naughty boy"):
     """Interleave the input_string with pipes.
 
     Given any string, interleave it with pipes (| this character)
+<<<<<<< HEAD
     e.g. "very naughty boy" should return "|v|e|r|y| |n|a|u|g|h|t|y| |b|o|y|"
     TIP: make sure that you have a pipe on both ends of the string.
     """
@@ -75,6 +97,18 @@ def put_behind_bars(input_string="very naughty boy"):
 
 def pet_filter(letter="a"):
     """Return a list of animals with `letter` in their name."""
+=======
+    e.g. "very naughty boy" should return the string
+    "|v|e|r|y| |n|a|u|g|h|t|y| |b|o|y|"
+    TIP: conside using the 'join' method in Python.
+    TIP: make sure that you have a pipe on both ends of the string.
+    """
+    pass
+
+
+def pet_filter(letter="a"):
+    """Return a list of pets whose name contains the character 'letter'"""
+>>>>>>> f76a1f2d8baff68dc359e69da49380b6073630ee
     pets = ["dog", "goat", "pig", "sheep", "cattle", "zebu", "cat", "chicken",
             "guinea pig", "donkey", "duck", "water buffalo",
             "western honey bee", "dromedary camel", "horse", "silkmoth",
@@ -83,8 +117,12 @@ def pet_filter(letter="a"):
             "bali cattle", "gayal", "turkey", "goldfish", "rabbit", "koi",
             "canary", "society finch", "fancy mouse", "siamese fighting fish",
             "fancy rat and lab rat", "mink", "red fox", "hedgehog", "guppy"]
+<<<<<<< HEAD
     return [i for i in pets if letter in i] 
 
+=======
+    pass
+>>>>>>> f76a1f2d8baff68dc359e69da49380b6073630ee
 
 
 def best_letter_for_pets():
@@ -94,6 +132,7 @@ def best_letter_for_pets():
     TIP: return just a letter, not the list of animals.
     """
     import string
+<<<<<<< HEAD
     the_alphabet = string.lowercase
     maxlen = 0
     maxletter = ""
@@ -104,11 +143,16 @@ def best_letter_for_pets():
             maxLetter = x
     print("maxlen"+str(maxlen)+"letter is="+maxletter)
     return maxletter 
+=======
+    the_alphabet = string.ascii_lowercase
+    pass
+>>>>>>> f76a1f2d8baff68dc359e69da49380b6073630ee
 
 
 def make_filler_text_dictionary():
     """Make a dictionary of random words filler text.
 
+<<<<<<< HEAD
     There is a random word generator here: http://www.setgetgo.com/randomword/
     The only argument that the generator takes is the length of the word.
 
@@ -131,6 +175,35 @@ def make_filler_text_dictionary():
             word_dictionary[number].append(new_word)
     return word_dictionary
 
+=======
+    There is a random word generator here:
+    "http://api.wordnik.com/v4/words.json/randomWords?api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5&minLength=3&maxLength=10&limit=1"
+    Currently, minLength=3 and maxLength=10 in this url. 
+    This means we will get a word between 3 and 10 characters.
+    If we set minLength=7 and maxLength=7, we will get something like this:
+    >>> url = "http://api.wordnik.com/v4/words.json/randomWords?api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5&minLength=7&maxLength=7&limit=1"
+    >>> r = requests.get(url)
+    >>> r.json() # will get you a python list containing something like this:
+    >>> # [{"id":5651391,"word":"salmony"}]
+    
+    Return a dictionary where the keys are numbers, and the values are lists of
+    words. e.g.
+    { 
+        3: ['Sep', 'the', 'yob'],
+        4: ['aaaa', 'bbbb', 'cccc'],
+        ...
+        7: ['aaaaaaa', 'bbbbbbb', 'ccccccc']
+    }
+    Use the API to get the 3 words.
+    
+    The dictionary should have the numbers between 3 and 7 inclusive.
+    (i.e. 3, 4, 5, 6, 7 and 3 words for each)
+    TIP: you'll need the requests library
+    """
+    
+    import requests
+    return
+>>>>>>> f76a1f2d8baff68dc359e69da49380b6073630ee
 
 
 def random_filler_text(number_of_words=200):
@@ -141,18 +214,30 @@ def random_filler_text(number_of_words=200):
     length, and a random one of the 3 words.
     Make the paragraph have number_of_words words in it.
     Return it as a string
+<<<<<<< HEAD
     TIP: you'll need the random library
     Bonus: extra mark if you get the paragraph to start with a
            capital letter and end with a full stop.
+=======
+    TIP: you'll need the random library, 
+        see line 77 of week4/hangman_leadboard.py for an example.
+>>>>>>> f76a1f2d8baff68dc359e69da49380b6073630ee
     """
     import random
     pass
 
 
 def fast_filler(number_of_words=200):
+<<<<<<< HEAD
     """Reimplement random filler text.
 
     This time, the first time the code runs, save the dictionary to a file.
+=======
+    """Reimplement random_filler_text.
+
+    This time, the first time the code runs, save the dictionary returned
+    from make_filler_text_dictionary to a file.
+>>>>>>> f76a1f2d8baff68dc359e69da49380b6073630ee
     On the second run,if the file already exists use it instead of going to
     the internet.
     Use the filename "dict_racey.words"
@@ -165,6 +250,7 @@ def fast_filler(number_of_words=200):
 
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     print(greet())
     print(three_counter())
     print(fizz_buzz())
@@ -176,3 +262,16 @@ if __name__ == '__main__':
     print(fast_filler())
     for i in range(10):
         print(i, fast_filler())
+=======
+    print((greet()))
+    print((three_counter()))
+    print((fizz_buzz()))
+    print((put_behind_bars()))
+    print((pet_filter()))
+    print((best_letter_for_pets()))
+    print((make_filler_text_dictionary()))
+    print((random_filler_text()))
+    print((fast_filler()))
+    for i in range(10):
+        print((i, fast_filler()))
+>>>>>>> f76a1f2d8baff68dc359e69da49380b6073630ee

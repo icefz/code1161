@@ -4,8 +4,13 @@
 This file tests your code. It'll check that the work in each
 of the exercise files does what it's supposed to.
 """
+<<<<<<< HEAD
 from __future__ import division
 from __future__ import print_function
+=======
+
+
+>>>>>>> f76a1f2d8baff68dc359e69da49380b6073630ee
 import imp
 import os
 import sys
@@ -22,19 +27,39 @@ from codeHelpers import Timeout
 WEEK_NUMBER = 8
 testResults = []
 
+<<<<<<< HEAD
+=======
+if 'week' in os.getcwd():
+    os.chdir('..')
+>>>>>>> f76a1f2d8baff68dc359e69da49380b6073630ee
 
 def exam_test(expected,
               args,
               function_to_test,
               finishing_function=None,
+<<<<<<< HEAD
               extra_message=""):
+=======
+              extra_message="",
+              chdir=False):
+>>>>>>> f76a1f2d8baff68dc359e69da49380b6073630ee
     print(extra_message)
     template = ("{n}:\n"
                 "    given:    {a}\n"
                 "    expected: {e}\n"
                 "    got:      {g}\n")
     try:
+<<<<<<< HEAD
         got = function_to_test(*args)
+=======
+        if chdir:
+            if 'week' not in os.getcwd():
+                os.chdir('./week8')
+        got = function_to_test(*args)
+        if chdir:
+            if 'week' in os.getcwd():
+                os.chdir('..')
+>>>>>>> f76a1f2d8baff68dc359e69da49380b6073630ee
         if finishing_function:
             print("raw", got)
             got = finishing_function(got)
@@ -65,10 +90,17 @@ def theTests(path_to_code_to_check="."):
     ex1path = "{}/week{}/exercise1.py".format(path_to_code_to_check,
                                               WEEK_NUMBER)
 
+<<<<<<< HEAD
     if ex_runs(path_to_code_to_check, exNumber=1, weekNumber=WEEK_NUMBER):
         exam = imp.load_source("exercise1", ex1path)
 
         testResults.append(test(test_flake8(ex1path), "pass the linter"))
+=======
+    if ex_runs(ex1path, exNumber=1, weekNumber=WEEK_NUMBER):
+        exam = imp.load_source("exercise1", ex1path)
+
+        # testResults.append(test(test_flake8(ex1path), "pass the linter"))
+>>>>>>> f76a1f2d8baff68dc359e69da49380b6073630ee
 
         exam_test("Hello the Queen", ["the Queen"], exam.greet)
         exam_test("Hello Pr♂nc♀♂", ["Pr♂nc♀♂"], exam.greet)
@@ -104,7 +136,11 @@ def theTests(path_to_code_to_check="."):
 
         exam_test("e", [], exam.best_letter_for_pets)
 
+<<<<<<< HEAD
         exam_test(175,
+=======
+        exam_test(160,
+>>>>>>> f76a1f2d8baff68dc359e69da49380b6073630ee
                   [],
                   exam.make_filler_text_dictionary,
                   lambda x: len(str(x)))
@@ -122,6 +158,7 @@ def theTests(path_to_code_to_check="."):
         exam_test(True,
                   [100],
                   exam.fast_filler,
+<<<<<<< HEAD
                   lambda x: len(x.split(" ")) == 100 and len(x) > 3*100)
         exam_test(True,
                   [10],
@@ -133,6 +170,25 @@ def theTests(path_to_code_to_check="."):
                   exam.fast_filler,
                   lambda x: x[-1] == ".",
                   "Test if fast_filler finishes with a .")
+=======
+                  lambda x: len(x.split(" ")) == 100 and len(x) > 3*100, 
+                  chdir=True)
+        
+        exam_test(True,
+                ['./week8/speedy_dict.words'],
+                os.path.exists)
+
+        # exam_test(True,
+        #           [10],
+        #           exam.fast_filler,
+        #           lambda x: x[0] in string.uppercase and x[1] in string.lowercase,
+        #           "Test if fast_filler is capitalised")
+        # exam_test(True,
+        #           [10],
+        #           exam.fast_filler,
+        #           lambda x: x[-1] == ".",
+        #           "Test if fast_filler finishes with a .")
+>>>>>>> f76a1f2d8baff68dc359e69da49380b6073630ee
 
         #
         # try:

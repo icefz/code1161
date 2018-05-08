@@ -1,0 +1,3 @@
+TODO: Reflect on what you learned this week and what is still unclear.
+last week i learn how to install opencv and tensorflow and protobuf python3-tk and i use conda to install this software and i can not not use pip and then when we install all this things my camera  will open.
+This week i have learned how do make data in the python and i will choose a topic and i will reasher all the data about this topic and i will studey haow to write code for the data in the python, and next week i will start to write the data code and i have question how to use code write the data project and i will learn about it
