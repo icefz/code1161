@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+This week i choose topic is about basketball called the shooting percentage of NBA players and the relationship between universities and then i will statistics shooting percentage of nba players start to write code in notebook and i have some questions  about the code and i will research in the google and i will solve these questions.
