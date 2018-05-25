@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+this week i write some code about my topic NBA and i think some code is really interesting.can import excle load in the notebook like this player1=pd.read_csv('E:/player_data.csv'). but  some code is really difficult this week i will ask teacher some question and then i will contain to wrirte code to improve my code
